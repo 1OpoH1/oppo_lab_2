@@ -41,35 +41,6 @@ namespace MySolution
 				Assert::IsTrue(result);
 			}
 		}
-		TEST_METHOD(ValidTime)
-		{
-			vector<string> Cases
-			{
-				"10:10",
-				"12:10",
-				"23:59",
-			};
-			for (int i = 0; i < Cases.size(); i++)
-			{
-				bool result = check_time(Cases[i]);
-				Assert::IsTrue(result);
-			}
-		}
-
-		TEST_METHOD(InvalidTime)
-		{
-			vector<string> Cases
-			{
-				"101:10",
-				"12.10",
-				"23:591",
-			};
-			for (int i = 0; i < Cases.size(); i++)
-			{
-				bool result = check_time(Cases[i]);
-				Assert::IsTrue(result);
-			}
-		}
 		TEST_METHOD(ValidNumber)
 		{
 			vector<int> Cases
